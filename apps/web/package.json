@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev --port 3000",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "clean": "rm -rf .turbo node_modules .next dist"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",

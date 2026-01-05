@@ -11,7 +11,10 @@
     "deps:major": "pnpm dlx taze@latest major -Ilwr",
     "commit": "git add . && git cz",
     "prepare": "lefthook install",
-    "knip": "knip"
+    "knip": "knip",
+    "clean": "rm -rf node_modules .turbo pnpm-lock.yaml",
+    "clean:workspaces": "turbo clean",
+    "reset": "pnpm clean:workspaces && pnpm clean && rm -rf apps/*/node_modules packages/*/node_modules apps/*/.next packages/*/.next .turbo && pnpm install"
   },
   "devDependencies": {
     "@biomejs/biome": "2.3.11",

@@ -20,6 +20,12 @@
     "//#check": {},
     "//#fix": {
       "cache": false
+    },
+    "clean": {
+      "cache": false
+    },
+    "//#clean": {
+      "cache": false
     }
   }
 }
