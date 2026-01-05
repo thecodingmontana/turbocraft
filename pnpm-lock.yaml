@@ -12,34 +12,34 @@ importers:
         specifier: 2.3.11
         version: 2.3.11
       '@commitlint/cli':
-        specifier: ^20.3.0
+        specifier: 20.3.0
         version: 20.3.0(@types/node@25.0.3)(typescript@5.9.3)
       '@commitlint/config-conventional':
-        specifier: ^20.3.0
+        specifier: 20.3.0
         version: 20.3.0
       '@types/node':
-        specifier: ^25.0.3
+        specifier: 25.0.3
         version: 25.0.3
       commitizen:
-        specifier: ^4.3.1
+        specifier: 4.3.1
         version: 4.3.1(@types/node@25.0.3)(typescript@5.9.3)
       cz-git:
-        specifier: ^1.12.0
+        specifier: 1.12.0
         version: 1.12.0
       husky:
-        specifier: ^9.1.7
+        specifier: 9.1.7
         version: 9.1.7
       knip:
-        specifier: ^5.79.0
+        specifier: 5.79.0
         version: 5.79.0(@types/node@25.0.3)(typescript@5.9.3)
       lefthook:
-        specifier: ^2.0.13
+        specifier: 2.0.13
         version: 2.0.13
       lint-staged:
-        specifier: ^16.2.7
+        specifier: 16.2.7
         version: 16.2.7
       turbo:
-        specifier: ^2.7.2
+        specifier: 2.7.2
         version: 2.7.2
       typescript:
         specifier: 5.9.3
@@ -58,19 +58,19 @@ importers:
         version: 4.11.3
     devDependencies:
       '@types/node':
-        specifier: ^20.19.27
+        specifier: 20.19.27
         version: 20.19.27
       tsc-alias:
-        specifier: ^1.8.16
+        specifier: 1.8.16
         version: 1.8.16
       tsup:
-        specifier: ^8.5.1
+        specifier: 8.5.1
         version: 8.5.1(jiti@2.6.1)(postcss@8.4.31)(tsx@4.21.0)(typescript@5.9.3)(yaml@2.8.2)
       tsx:
-        specifier: ^4.21.0
+        specifier: 4.21.0
         version: 4.21.0
       typescript:
-        specifier: ^5.9.3
+        specifier: 5.9.3
         version: 5.9.3
 
   apps/web:
@@ -92,7 +92,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/typescript-config
       '@types/node':
-        specifier: ^22.19.3
+        specifier: 22.19.3
         version: 22.19.3
       '@types/react':
         specifier: 19.2.7
@@ -101,7 +101,7 @@ importers:
         specifier: 19.2.3
         version: 19.2.3(@types/react@19.2.7)
       eslint:
-        specifier: ^9.39.2
+        specifier: 9.39.2
         version: 9.39.2(jiti@2.6.1)
       typescript:
         specifier: 5.9.3
@@ -122,7 +122,7 @@ importers:
         specifier: workspace:*
         version: link:../typescript-config
       '@types/node':
-        specifier: ^22.19.3
+        specifier: 22.19.3
         version: 22.19.3
       '@types/react':
         specifier: 19.2.7
@@ -131,7 +131,7 @@ importers:
         specifier: 19.2.3
         version: 19.2.3(@types/react@19.2.7)
       eslint:
-        specifier: ^9.39.2
+        specifier: 9.39.2
         version: 9.39.2(jiti@2.6.1)
       typescript:
         specifier: 5.9.3
@@ -1686,10 +1686,6 @@ packages:
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
 
-  js-yaml@4.1.0:
-    resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
-    hasBin: true
-
   js-yaml@4.1.1:
     resolution: {integrity: sha512-qQKT4zQxXl8lLwBtHMWwaTcGfFOZviOJet3Oy/xmGk2gZH677CJM9EvtfdSkgWcATZhj/55JZ0rmy3myCT5lsA==}
     hasBin: true
@@ -2848,7 +2844,7 @@ snapshots:
       globals: 14.0.0
       ignore: 5.3.2
       import-fresh: 3.3.1
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       minimatch: 3.1.2
       strip-json-comments: 3.1.1
     transitivePeerDependencies:
@@ -3479,7 +3475,7 @@ snapshots:
     dependencies:
       env-paths: 2.2.1
       import-fresh: 3.3.1
-      js-yaml: 4.1.0
+      js-yaml: 4.1.1
       parse-json: 5.2.0
     optionalDependencies:
       typescript: 5.9.3
@@ -3929,10 +3925,6 @@ snapshots:
   joycon@3.1.1: {}
 
   js-tokens@4.0.0: {}
-
-  js-yaml@4.1.0:
-    dependencies:
-      argparse: 2.0.1
 
   js-yaml@4.1.1:
     dependencies:
