@@ -7,6 +7,9 @@
     "check": "ultracite check",
     "fix": "ultracite fix",
     "check-and-fix": "pnpm check && pnpm fix",
+    "deps": "pnpm dlx taze@latest -Ilwr",
+    "deps:major": "pnpm dlx taze@latest major -Ilw",
+    "commit": "git cz",
     "prepare": "lefthook install"
   },
   "devDependencies": {
