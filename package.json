@@ -8,8 +8,8 @@
     "fix": "ultracite fix",
     "check-and-fix": "pnpm check && pnpm fix",
     "deps": "pnpm dlx taze@latest -Ilwr",
-    "deps:major": "pnpm dlx taze@latest major -Ilw",
-    "commit": "git cz",
+    "deps:major": "pnpm dlx taze@latest major -Ilwr",
+    "commit": "git add . && git cz",
     "prepare": "lefthook install"
   },
   "devDependencies": {
@@ -22,10 +22,10 @@
     "lefthook": "^2.0.13",
     "lint-staged": "^16.2.7",
     "turbo": "^2.7.2",
-    "typescript": "5.9.2",
+    "typescript": "5.9.3",
     "ultracite": "7.0.8"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@9.15.9",
   "engines": {
     "node": ">=18"
   },
