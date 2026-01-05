@@ -6,6 +6,9 @@ import {
 import { Stack } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import "react-native-reanimated";
+import { HeroUINativeProvider } from "heroui-native";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import "../global.css";
 
 import { useColorScheme } from "@/hooks/use-color-scheme";
 
@@ -17,15 +20,21 @@ export default function RootLayout() {
 	const colorScheme = useColorScheme();
 
 	return (
-		<ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-			<Stack>
-				<Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-				<Stack.Screen
-					name="modal"
-					options={{ presentation: "modal", title: "Modal" }}
-				/>
-			</Stack>
-			<StatusBar style="auto" />
-		</ThemeProvider>
+		<GestureHandlerRootView style={{ flex: 1 }}>
+			<HeroUINativeProvider>
+				<ThemeProvider
+					value={colorScheme === "dark" ? DarkTheme : DefaultTheme}
+				>
+					<Stack>
+						<Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+						<Stack.Screen
+							name="modal"
+							options={{ presentation: "modal", title: "Modal" }}
+						/>
+					</Stack>
+					<StatusBar style="auto" />
+				</ThemeProvider>
+			</HeroUINativeProvider>
+		</GestureHandlerRootView>
 	);
 }

@@ -10,6 +10,7 @@
     "deps": "pnpm dlx taze@latest -Ilwr",
     "deps:major": "pnpm dlx taze@latest major -Ilwr",
     "commit": "git add . && git cz",
+    "mobile": "pnpm --filter @repo/native run start",
     "prepare": "lefthook install",
     "knip": "knip",
     "clean": "rm -rf node_modules .turbo pnpm-lock.yaml",
