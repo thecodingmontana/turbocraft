@@ -1,135 +1,100 @@
-# Turborepo starter
+# Turbo Craft
 
-This Turborepo starter is maintained by the Turborepo core team.
+Basic template for Modern **Full Stack Web Developers**.
+Powered with several **Linting Tools** and **Commit Hooks**, it will help you code *faster* and *better*.
 
-## Using this example
+### Monorepo features
 
-Run the following command:
+- [Turborepo][Turborepo] - for *faster builds*
+- [degit][degit] - project scaffolding
+- [taze][updates] for update packages
+
+### Commit Conventions and Git Hooks
+
+- [Lefthook][Lefthook] for **GitHub Hooks**:
+- [commitlint][commitlint] - Lint commit messages
+- [commitizen][commitizen] - commit conventions
+- [cz-git][cz-git] - commitizen adapter with emoji
+
+### Linters
+
+- [Biome][Biome] - **ESLint** and **prettier** alternative
+- [TypeScript][TypeScript] for static type checking as **internal package**
+- [Renovate][Renovate]- Dependency updater
+- [knip][knip]- Cut the clutter from TypeScript projects
+- [MarkdownLint][MarkdownLint] for linting markdown, see [MarkdownLint rules][MarkdownLint-rules] (as VS Code suggested plugin)
+- [VSCode & Zed Settings][vscode-settings & zed-settings] - workspace settings
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Getting started
 
 ```sh
-npx create-turbo@latest
+pnpm dlx degit thecodingmontana/turbocraft my-app
+cd my-app
+pnpm install
 ```
 
-## What's inside?
+To run:
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
+```sh
+pnpm run dev
 ```
 
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
+### Monorepo Internal Packages
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
+To reference packages use the `workspace:*` key (see [workspaces][pnpm-workspaces]) :
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
+```json
+{
+  "name": "@repo/a",
+  "dependencies": {
+    "@repo/b": "workspace:*"
+  }
+}
 ```
 
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
+### Generators
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
+Learn more about Turborepo Generators at [turbo: code-generation][turbo-generation]
 
-### Remote Caching
+**Generate New app or package**:
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
-```
-cd my-turborepo
-
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
-
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
+```sh
+turbo gen workspace
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+## Contributing to TurboCraft
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
+Check [CONTRIBUTING][contributors-doc] for
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Useful Links
+## Inspired By
 
-Learn more about the power of Turborepo:
+- [mugencraft/turbobun](https://github.com/mugencraft/turbobun)
+- [u1aryz/bun-biome-template](https://github.com/u1aryz/bun-biome-template)
+- [codiplace/bun-monorepo](https://github.com/codiplace/bun-monorepo)
+- [othneildrew/Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## License
+
+[MIT License](license-url)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[contributors-url]: (https://github.com/mugencraft/turbobun/graphs/contributors)
+[contributors-doc]: (./docs/CONTRIBUTING.md)
+[forks-url]: (https://github.com/thecodingmontana/turbocraft/network/members)
+[stars-url]: (https://github.com/thecodingmontana/turbocraft/stargazers)
+[issues-url]: (https://github.com/thecodingmontana/turbocraft/issues)
+[license-url]: (./LICENSE)
