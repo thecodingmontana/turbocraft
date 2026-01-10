@@ -134,7 +134,7 @@ importers:
         version: 15.0.10(expo@54.0.30)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))
       heroui-native:
         specifier: 1.0.0-beta.10
-        version: 1.0.0-beta.10(4n6xxatqgzick7h26pyh3v5tba)
+        version: 1.0.0-beta.10(91c91bfa88ea7096f9d62d39ffa87718)
       react:
         specifier: 19.1.4
         version: 19.1.4
@@ -176,7 +176,7 @@ importers:
         version: 4.1.18
       uniwind:
         specifier: ^1.2.2
-        version: 1.2.2(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4)(tailwindcss@4.1.18)
+        version: 1.2.3(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4)(tailwindcss@4.1.18)
     devDependencies:
       '@types/react':
         specifier: 19.2.3
@@ -5266,8 +5266,8 @@ packages:
     resolution: {integrity: sha512-gptHNQghINnc/vTGIk0SOFGFNXw7JVrlRUtConJRlvaw6DuX0wO5Jeko9sWrMBhh+PsYAZ7oXAiOnf/UKogyiw==}
     engines: {node: '>= 10.0.0'}
 
-  uniwind@1.2.2:
-    resolution: {integrity: sha512-6416EvoVMuljO5GI8CpRSv1/d72Ey5LjkhXeAWc5SMGuBZ5Z7nA81KHDFBWjNR+vD9hU8TxWuoYJDhgosEqXvw==}
+  uniwind@1.2.3:
+    resolution: {integrity: sha512-3O+dgxibcLlZgO0XzaHnVUnx9fCiAoedfDYkaJ1aqeGDenvnNdebzklDmcaW8647B7I33580kYhB61XZAhnroQ==}
     peerDependencies:
       react: 19.1.4
       react-native: '>=0.81.0'
@@ -8966,7 +8966,7 @@ snapshots:
     dependencies:
       hermes-estree: 0.32.0
 
-  heroui-native@1.0.0-beta.10(4n6xxatqgzick7h26pyh3v5tba):
+  heroui-native@1.0.0-beta.10(91c91bfa88ea7096f9d62d39ffa87718):
     dependencies:
       '@gorhom/bottom-sheet': 5.2.8(@types/react@19.2.3)(react-native-gesture-handler@2.30.0(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4))(react-native-reanimated@4.2.1(react-native-worklets@0.7.1(@babel/core@7.28.5)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4)
       react: 19.1.4
@@ -10871,7 +10871,7 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  uniwind@1.2.2(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4)(tailwindcss@4.1.18):
+  uniwind@1.2.3(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4)(tailwindcss@4.1.18):
     dependencies:
       '@tailwindcss/node': 4.1.17
       '@tailwindcss/oxide': 4.1.17
