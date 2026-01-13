@@ -51,8 +51,8 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
       ultracite:
-        specifier: 7.0.8
-        version: 7.0.8(typescript@5.9.3)
+        specifier: 7.0.11
+        version: 7.0.11(oxlint@1.37.0)(typescript@5.9.3)
 
   apps/api:
     dependencies:
@@ -134,7 +134,7 @@ importers:
         version: 15.0.10(expo@54.0.30)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))
       heroui-native:
         specifier: 1.0.0-beta.10
-        version: 1.0.0-beta.10(4n6xxatqgzick7h26pyh3v5tba)
+        version: 1.0.0-beta.10(91c91bfa88ea7096f9d62d39ffa87718)
       react:
         specifier: 19.1.4
         version: 19.1.4
@@ -5102,8 +5102,8 @@ packages:
     resolution: {integrity: sha512-L0Orpi8qGpRG//Nd+H90vFB+3iHnue1zSSGmNOOCh1GLJ7rUKVwV2HvijphGQS2UmhUZewS9VgvxYIdgr+fG1A==}
     hasBin: true
 
-  trpc-cli@0.12.1:
-    resolution: {integrity: sha512-/D/mIQf3tUrS7ZKJZ1gmSPJn2psAABJfkC5Eevm55SZ4s6KwANOUNlwhAGXN9HT4VSJVfoF2jettevE9vHPQlg==}
+  trpc-cli@0.12.2:
+    resolution: {integrity: sha512-kGNCiyOimGlfcZFImbWzFF2Nn3TMnenwUdyuckiN5SEaceJbIac7+Iau3WsVHjQpoNgugFruZMDOKf8GNQNtJw==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -5224,9 +5224,14 @@ packages:
   ufo@1.6.1:
     resolution: {integrity: sha512-9a4/uxlTWJ4+a5i0ooc1rU7C7YOw3wT+UGqdeNNHWnOF9qcMBgLRS+4IYUqbczewFx4mLEig6gawh7X6mFlEkA==}
 
-  ultracite@7.0.8:
-    resolution: {integrity: sha512-b98lKaVl3UtH1TF6gZjhPQgtx063i0XpdV1nHEfexHsLyLaaosqU9FT8Tw/HwQkb/UmJ8WihKndur0bSUT0BYw==}
+  ultracite@7.0.11:
+    resolution: {integrity: sha512-YeuJTf/Tu12l7K0qvl1G525NfrPUay6UFVt6TrTL8QfXcFZBI+Tzr0Dg14Hxcb964pRQF5PjBaUk3bJCNQHu+g==}
     hasBin: true
+    peerDependencies:
+      oxlint: ^1.0.0
+    peerDependenciesMeta:
+      oxlint:
+        optional: true
 
   undici-types@6.21.0:
     resolution: {integrity: sha512-iwDZqg0QAGrg9Rav5H4n0M64c3mkR59cJ6wQp+7C4nI0gsmExaedaYLNO44eT4AtBBwjbTiGPMlt2Md0T9H9JQ==}
@@ -8966,7 +8971,7 @@ snapshots:
     dependencies:
       hermes-estree: 0.32.0
 
-  heroui-native@1.0.0-beta.10(4n6xxatqgzick7h26pyh3v5tba):
+  heroui-native@1.0.0-beta.10(91c91bfa88ea7096f9d62d39ffa87718):
     dependencies:
       '@gorhom/bottom-sheet': 5.2.8(@types/react@19.2.3)(react-native-gesture-handler@2.30.0(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4))(react-native-reanimated@4.2.1(react-native-worklets@0.7.1(@babel/core@7.28.5)(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4))(react-native@0.81.5(@babel/core@7.28.5)(@types/react@19.2.3)(react@19.1.4))(react@19.1.4)
       react: 19.1.4
@@ -9913,6 +9918,7 @@ snapshots:
       '@oxlint/linux-x64-musl': 1.37.0
       '@oxlint/win32-arm64': 1.37.0
       '@oxlint/win32-x64': 1.37.0
+    optional: true
 
   p-limit@2.3.0:
     dependencies:
@@ -10728,7 +10734,7 @@ snapshots:
 
   tree-kill@1.2.2: {}
 
-  trpc-cli@0.12.1(@trpc/server@11.8.1(typescript@5.9.3))(zod@4.3.5):
+  trpc-cli@0.12.2(@trpc/server@11.8.1(typescript@5.9.3))(zod@4.3.5):
     dependencies:
       commander: 14.0.2
     optionalDependencies:
@@ -10827,7 +10833,7 @@ snapshots:
 
   ufo@1.6.1: {}
 
-  ultracite@7.0.8(typescript@5.9.3):
+  ultracite@7.0.11(oxlint@1.37.0)(typescript@5.9.3):
     dependencies:
       '@clack/prompts': 0.11.0
       '@trpc/server': 11.8.1(typescript@5.9.3)
@@ -10835,14 +10841,14 @@ snapshots:
       glob: 13.0.0
       jsonc-parser: 3.3.1
       nypm: 0.6.2
-      oxlint: 1.37.0
-      trpc-cli: 0.12.1(@trpc/server@11.8.1(typescript@5.9.3))(zod@4.3.5)
+      trpc-cli: 0.12.2(@trpc/server@11.8.1(typescript@5.9.3))(zod@4.3.5)
       zod: 4.3.5
+    optionalDependencies:
+      oxlint: 1.37.0
     transitivePeerDependencies:
       - '@orpc/server'
       - '@valibot/to-json-schema'
       - effect
-      - oxlint-tsgolint
       - typescript
       - valibot
 
