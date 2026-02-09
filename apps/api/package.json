@@ -8,11 +8,11 @@
     "clean": "rm -rf .turbo node_modules dist"
   },
   "dependencies": {
-    "@hono/node-server": "^1.19.7",
-    "hono": "^4.11.3"
+    "@hono/node-server": "^1.19.9",
+    "hono": "^4.11.9"
   },
   "devDependencies": {
-    "@types/node": "^20.19.27",
+    "@types/node": "^20.19.33",
     "tsc-alias": "^1.8.16",
     "tsup": "^8.5.1",
     "tsx": "^4.21.0",
