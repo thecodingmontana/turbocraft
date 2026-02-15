@@ -133,8 +133,8 @@ importers:
         specifier: ~15.0.10
         version: 15.0.10(expo@54.0.33)(react-native@0.81.6(@babel/core@7.28.5)(@types/react@19.2.13)(react@19.1.5))
       heroui-native:
-        specifier: 1.0.0-beta.13
-        version: 1.0.0-beta.13(c89a570175a6fa950c24e2224aad7c46)
+        specifier: 1.0.0-rc.1
+        version: 1.0.0-rc.1(c89a570175a6fa950c24e2224aad7c46)
       react:
         specifier: 19.1.5
         version: 19.1.5
@@ -3467,7 +3467,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
-    deprecated: Glob versions prior to v9 are no longer supported
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   global-directory@4.0.1:
     resolution: {integrity: sha512-wHTUcDUoZ1H5/0iVqEudYW4/kAlN5cZ3j/bXn0Dpbizl9iaUVeWSHqiOjsgk6OW2bkLclbBjzewBz6weQ1zA2Q==}
@@ -3520,8 +3520,8 @@ packages:
   hermes-parser@0.32.0:
     resolution: {integrity: sha512-g4nBOWFpuiTqjR3LZdRxKUkij9iyveWeuks7INEsMX741f3r9xxrOe8TeQfUxtda0eXmiIFiMQzoeSQEno33Hw==}
 
-  heroui-native@1.0.0-beta.13:
-    resolution: {integrity: sha512-bpR/R1V5cJZpzcFIdPBaJyl/OpiEClFFcAdKU6sTX7OAQRgbgBXz1vHcA3pB1jaj1ilk9KLUa7MGDevDGAASnw==}
+  heroui-native@1.0.0-rc.1:
+    resolution: {integrity: sha512-0hrmXTOsq+aiZpz6jMFcjSSBVkda7uZ2igdA7Z+kp8KSVn9Vr+Jr4jhZ8HH4RjPXGQJNzOEXKF/InqWU4xcgAw==}
     peerDependencies:
       '@gorhom/bottom-sheet': ^5
       react: 19.1.5
@@ -9031,7 +9031,7 @@ snapshots:
     dependencies:
       hermes-estree: 0.32.0
 
-  heroui-native@1.0.0-beta.13(c89a570175a6fa950c24e2224aad7c46):
+  heroui-native@1.0.0-rc.1(c89a570175a6fa950c24e2224aad7c46):
     dependencies:
       '@gorhom/bottom-sheet': 5.2.8(@types/react@19.2.13)(react-native-gesture-handler@2.30.0(react-native@0.81.6(@babel/core@7.28.5)(@types/react@19.2.13)(react@19.1.5))(react@19.1.5))(react-native-reanimated@4.2.1(react-native-worklets@0.7.2(@babel/core@7.28.5)(react-native@0.81.6(@babel/core@7.28.5)(@types/react@19.2.13)(react@19.1.5))(react@19.1.5))(react-native@0.81.6(@babel/core@7.28.5)(@types/react@19.2.13)(react@19.1.5))(react@19.1.5))(react-native@0.81.6(@babel/core@7.28.5)(@types/react@19.2.13)(react@19.1.5))(react@19.1.5)
       react: 19.1.5
